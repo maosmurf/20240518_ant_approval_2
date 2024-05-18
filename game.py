@@ -15,15 +15,10 @@ class Game:
         return self.board
 
     def move(self) -> Self:
-        return move_ant_forward(self)
-
-
-def move_ant_forward(game: Game) -> Game:
-    """"""
-    if len(str(game)) == 2:
-        s = """
+        if len(str(self.board)) == 2:
+            s = """
 ..
  <
-         """
-        return Game(board=s.strip())
-    return Game(board='.v')
+"""
+            return Game(board=s.strip())
+        return Game(board='.v')

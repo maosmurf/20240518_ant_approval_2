@@ -1,3 +1,5 @@
+from functools import reduce
+
 from approvaltests import verify, Options
 from approvaltests.inline.inline_options import InlineOptions
 
