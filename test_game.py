@@ -3,14 +3,21 @@ from approvaltests.inline.inline_options import InlineOptions
 
 options = Options().inline(InlineOptions.semi_automatic())
 
-from game import create_game, move_ant_forward
+from game import Game
+
+
+def game_after_steps(steps: int):
+    game: Game = Game(board=">")
+    for s in range(steps):
+        game = game.move()
+    return game
 
 
 def test_new_game_has_space_to_the_right():
     """
     >
     """
-    game = create_game()
+    game = game_after_steps(steps=0)
     verify(game, options=options)
 
 
@@ -18,8 +25,7 @@ def test_move_ant_forward_once():
     """
     .v
     """
-    game = create_game()
-    result = move_ant_forward(game=game)
+    result = game_after_steps(steps=1)
     verify(result, options=options)
 
 
@@ -28,7 +34,5 @@ def test_move_ant_forward_twice():
     ..
      <
     """
-    game1 = create_game()
-    game2 = move_ant_forward(game=game1)
-    game3 = move_ant_forward(game=game2)
-    verify(game3, options=options)
+    result = game_after_steps(steps=2)
+    verify(result, options=options)
