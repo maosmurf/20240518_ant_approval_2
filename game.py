@@ -17,4 +17,4 @@ def create_game() -> str:
 
 
 def move_ant_forward(game: str) -> str:
-    return f'.{game}'
+    return f'.v'

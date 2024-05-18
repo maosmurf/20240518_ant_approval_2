@@ -16,7 +16,7 @@ def test_new_game_has_space_to_the_right():
 
 def test_move_ant_forward_once():
     """
-    .>
+    .v
     """
     game = create_game()
     result = move_ant_forward(game=game)
@@ -25,7 +25,8 @@ def test_move_ant_forward_once():
 
 def test_move_ant_forward_twice():
     """
-    ..>
+    .v
+    ***** DELETE ME TO APPROVE *****
     """
     game1 = create_game()
     game2 = move_ant_forward(game=game1)
