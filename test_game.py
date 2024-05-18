@@ -8,7 +8,7 @@ from game import create_game
 
 def test_new_game():
     """
-    x
+    >
     """
     game=create_game()
     verify(game, options=options)
