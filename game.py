@@ -7,8 +7,8 @@ The "ant" moves according to the rules below:
 
 
 def create_game() -> str:
-    return ">."
+    return ">"
 
 
 def move_ant_forward(game: str) -> str:
-    return ".>"
+    return f'.{game}'
