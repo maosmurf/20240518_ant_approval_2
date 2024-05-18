@@ -25,8 +25,8 @@ def test_move_ant_forward_once():
 
 def test_move_ant_forward_twice():
     """
-    .v
-    ***** DELETE ME TO APPROVE *****
+    ..
+     <
     """
     game1 = create_game()
     game2 = move_ant_forward(game=game1)
