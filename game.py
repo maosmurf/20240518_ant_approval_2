@@ -1,3 +1,3 @@
 def create_game():
-    return ">"
+    return ">."
 
